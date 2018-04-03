@@ -8,3 +8,4 @@ export default () => (
   <TableWithActionBar config={config} data={data} preferences={preferences} />
   
 );
+  
