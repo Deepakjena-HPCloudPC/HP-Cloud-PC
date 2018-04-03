@@ -6,7 +6,7 @@ import { Formik } from 'formik';
 import Yup from 'yup';
 
 
-class PaginationHandler {
+class PaginationHandler {  
 
   constructor() {
     this.currentPage = 1;
