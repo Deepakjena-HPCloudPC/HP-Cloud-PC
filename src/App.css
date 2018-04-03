@@ -7,10 +7,9 @@
   background-color: rgba(241, 241, 241, 0.68);
   margin-left: 260px;
   min-height: calc(100% - 240px);
-  padding: 120px 20px;
+  padding: 25px 20px;
   width: calc(100% - 300px);
 }
-
 
 .vn-side-menu__logo{
   padding: 15px 5px;
@@ -22,4 +21,8 @@
 
 .vn-side-menu--hp-theme .vn-side-menu__item-link{
   padding-left: 28px !important;
+}
+
+.vn-appbar__content{
+  padding: 0 10px 0 0;
 }

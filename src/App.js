@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Header, SideMenu, SideMenuItem, Icon } from '@veneer/core';
+import { Header, SideMenu, SideMenuItem, Icon, AppBar, AppBarLeftSection, AppBarRightSection, IconButton} from '@veneer/core';
 import Dashboard from './pages/Dashboard';
 import MyCustomers from './pages/MyCustomers';
 import Neworder from './pages/Neworder';
@@ -72,7 +72,7 @@ const innerPages = [
       }
     ],
     key: 'neworder',
-    label: "New order",
+    label: "New Order",
     icon:"request",
     route: {
       path: '/neworder',
@@ -91,7 +91,7 @@ const innerPages = [
       }
     ],
     key: 'myorder',
-    label: "My orders",
+    label: "My Orders",
     icon:"inventory",
     route: {
       path: '/myorder',
@@ -202,22 +202,32 @@ export default ({ ...props }) => (
                   key={`header-${page.key}`}
                   {...page.route}
                   render={props => (
-                    <div>
-                    <Header
-                      title={page.title}
-                      theme="hp"
-                      crumbs={page.crumbs &&
-                        page.crumbs.map(
-                          crumb => (
-                            {
-                              ...crumb,
-                              onClick: handleClick(props.history, crumb.url),
-                            }
+                    <AppBar
+                      style={{
+                        position: "relative",
+                        zIndex: 10
+                      }}
+                        theme="hp"
+                        menuEnabled={true}
+                        crumbs={page.crumbs &&
+                          page.crumbs.map(
+                            crumb => (
+                              {
+                                ...crumb,
+                                onClick: handleClick(props.history, crumb.url),
+                              }
+                            )
                           )
-                        )
-                      }
-                    />
-                    </div>)
+                        }
+                      >
+                      <AppBarLeftSection>
+                        <h4>{page.title}</h4>
+                      </AppBarLeftSection>
+                      <AppBarRightSection>
+                        <IconButton icon="user" />
+                      </AppBarRightSection>
+                    </AppBar>
+                    )
                   }
                 />
             )

@@ -129,6 +129,11 @@ class Neworder extends React.Component {
                         value="undefined" />
                     </RadioButtons>
                 </div>
+                <FormField label="How many users" id="formfield-id">
+                    <div style={{width: "400px"}}>
+                        <TextBox placeholder="No of users" name="input_name" maxLength="undefined" />
+                    </div>
+                </FormField>
             </FormField>
         </Panel>
 
@@ -177,11 +182,6 @@ class Neworder extends React.Component {
                     onChange="undefined"
                     value="undefined" />
                 </RadioButtons>
-                <FormField label="How many users" id="formfield-id">
-                    <div style={{width: "400px"}}>
-                        <TextBox placeholder="No of users" name="input_name" maxLength="undefined" />
-                    </div>
-                </FormField>
             </FormField>
 
         </Panel>
