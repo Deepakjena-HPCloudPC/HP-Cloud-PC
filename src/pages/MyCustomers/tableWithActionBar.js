@@ -12,7 +12,7 @@ class PaginationHandler {
     this.currentPage = 1;
     this.pageSize = 5;
     this.pageSizeOptions = [2, 5, 10];
-    this.totalItems = 0;
+    this.totalItems = 0; 
   }
 
   changePageSize = (pageSize) => {
