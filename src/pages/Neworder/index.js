@@ -7,14 +7,8 @@ class Neworder extends React.Component {
     render() {
       return (
         <div>
-        <Panel title="Questionnaires" className="undefined" contentClassName="undefined">
-            <FormField label="1. How many users  are you intending to  provide with Cloud PC ?" id="formfield-id">
-                <div style={{width: "400px"}}>
-                    <TextBox placeholder="no of users to provide with Cloud Pc" name="input_name" maxLength="undefined" />
-                </div>
-            </FormField>
-
-            <FormField label="2. Breakdown of MOBILE and FIXED LOCATION users:" id="formfield-id">
+        <Panel title="User Details" className="undefined" contentClassName="undefined">
+            <FormField label="1. Breakdown of MOBILE and FIXED LOCATION users:" id="formfield-id">
                 <RadioButtons name="radiobutton_label" id="radio-group-id">
                     <RadioButton
                         label="Mobile Users"
@@ -32,7 +26,7 @@ class Neworder extends React.Component {
                 </div>
             </FormField>
 
-            <FormField label="3. Display Usge among Users (how many displays does each user have)" id="formfield-id">
+            <FormField label="2. Display Usge among Users (how many displays does each user have)" id="formfield-id">
                 <RadioButtons name="radiobutton_label" id="radio-group-id">
                     <RadioButton
                         label="1 or 2 Displays"
@@ -50,32 +44,7 @@ class Neworder extends React.Component {
                 </div>
             </FormField>
 
-            <FormField label="4. How are your PRINTERS supported" id="formfield-id">
-            <div style={{width: "600px"}}>
-                <RadioButtons name="radiobutton_label" id="radio-group-id">
-                    <RadioButton
-                        label="User has a printer connected to their PC"
-                        index={0}
-                        onChange="undefined"
-                        value="undefined" />
-                    <RadioButton
-                        label="Users connect to printers on the local network"
-                        index={1}
-                        onChange="undefined"
-                        value="undefined" />
-                        <RadioButton
-                        label="Users use E-Print services"
-                        index={2}
-                        onChange="undefined"
-                        value="undefined" />
-                </RadioButtons>
-            </div>
-                <div style={{width: "400px"}}>
-                    <TextBox placeholder="Placeholder" name="input_name" maxLength="undefined" />
-                </div>
-            </FormField>
-
-            <FormField label="5. Breakdown of MOBILE and FIXED LOCATION users:" id="formfield-id">
+            <FormField label="3. Breakdown of MOBILE and FIXED LOCATION users:" id="formfield-id">
                 <RadioButtons name="radiobutton_label" id="radio-group-id">
                     <RadioButton
                         label="Camera"
@@ -98,7 +67,7 @@ class Neworder extends React.Component {
                 </div>
             </FormField>
 
-            <FormField label="6. Breakdown of MOBILE and FIXED LOCATION users:" id="formfield-id">
+            <FormField label="4. Breakdown of MOBILE and FIXED LOCATION users:" id="formfield-id">
                 <RadioButtons name="radiobutton_label" id="radio-group-id">
                     <RadioButton
                         label="Yes"
@@ -113,27 +82,7 @@ class Neworder extends React.Component {
                 </RadioButtons>
             </FormField>
 
-            <FormField label="7. Do any of your peripherals require a Serial Port" id="formfield-id">
-                <RadioButtons name="radiobutton_label" id="radio-group-id">
-                    <RadioButton
-                    label="Yes"
-                    index={0}
-                    onChange="undefined"
-                    value="undefined" />
-                    <RadioButton
-                    label="No"
-                    index={1}
-                    onChange="undefined"
-                    value="undefined" />
-                </RadioButtons>
-                <FormField label="How many users" id="formfield-id">
-                    <div style={{width: "400px"}}>
-                        <TextBox placeholder="No of users" name="input_name" maxLength="undefined" />
-                    </div>
-                </FormField>
-            </FormField>
-
-            <FormField label="8. Understanding the Software used by your Users" id="formfield-id">
+            <FormField label="5. Understanding the Software used by your Users" id="formfield-id">
                 <div style={{width: "300px"}}>
                     <RadioButtons name="radiobutton_label" id="radio-group-id">
                         <RadioButton
@@ -182,6 +131,61 @@ class Neworder extends React.Component {
                 </div>
             </FormField>
         </Panel>
+
+        <Panel title="Product Details" className="undefined" contentClassName="undefined">
+        <FormField label="1. How many users  are you intending to  provide with Cloud PC ?" id="formfield-id">
+                <div style={{width: "400px"}}>
+                    <TextBox placeholder="no of users to provide with Cloud Pc" name="input_name" maxLength="undefined" />
+                </div>
+            </FormField>
+
+            <FormField label="2. How are your PRINTERS supported" id="formfield-id">
+            <div style={{width: "600px"}}>
+                <RadioButtons name="radiobutton_label" id="radio-group-id">
+                    <RadioButton
+                        label="User has a printer connected to their PC"
+                        index={0}
+                        onChange="undefined"
+                        value="undefined" />
+                    <RadioButton
+                        label="Users connect to printers on the local network"
+                        index={1}
+                        onChange="undefined"
+                        value="undefined" />
+                        <RadioButton
+                        label="Users use E-Print services"
+                        index={2}
+                        onChange="undefined"
+                        value="undefined" />
+                </RadioButtons>
+            </div>
+                <div style={{width: "400px"}}>
+                    <TextBox placeholder="Placeholder" name="input_name" maxLength="undefined" />
+                </div>
+            </FormField>
+
+             <FormField label="3. Do any of your peripherals require a Serial Port" id="formfield-id">
+                <RadioButtons name="radiobutton_label" id="radio-group-id">
+                    <RadioButton
+                    label="Yes"
+                    index={0}
+                    onChange="undefined"
+                    value="undefined" />
+                    <RadioButton
+                    label="No"
+                    index={1}
+                    onChange="undefined"
+                    value="undefined" />
+                </RadioButtons>
+                <FormField label="How many users" id="formfield-id">
+                    <div style={{width: "400px"}}>
+                        <TextBox placeholder="No of users" name="input_name" maxLength="undefined" />
+                    </div>
+                </FormField>
+            </FormField>
+
+        </Panel>
+
         <div className="vn-button-group--horizontal" style={{float: "right", marginTop:"10"}}>
             <Button appearance="undefined" className="undefined">
                 Save Order

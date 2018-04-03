@@ -14,10 +14,11 @@ import TablePage from './pages/TablePage';
 import logo from './hp.svg';
 import './App.css';
 
-const handleClick = (history, path, selected) => (event) => {
+const handleClick = (history, path) => (event) => {
   event.preventDefault();
   history.push(path);
 }
+
 
 const innerPages = [
   {
@@ -34,6 +35,7 @@ const innerPages = [
     key: 'dashboard',
     label: "Dashboard",
     icon:"dashboard",
+    selected: true,
     route: {
       path: '/dashboard',
     },
@@ -183,10 +185,9 @@ export default ({ ...props }) => (
                   render={props => (
                     <SideMenuItem
                       label={page.label}
-                      onClick={handleClick(props.history, page.route.path, page.selected)}
+                      onClick={handleClick(props.history, page.route.path)}
                       url={page.route.path}
                       icon={page.icon}
-                      selected={page.selected}
                     />
                   )}
                 />
@@ -201,6 +202,7 @@ export default ({ ...props }) => (
                   key={`header-${page.key}`}
                   {...page.route}
                   render={props => (
+                    <div>
                     <Header
                       title={page.title}
                       theme="hp"
@@ -209,12 +211,13 @@ export default ({ ...props }) => (
                           crumb => (
                             {
                               ...crumb,
-                              onClick: handleClick(props.history, crumb.url, props.selected),
+                              onClick: handleClick(props.history, crumb.url),
                             }
                           )
                         )
                       }
-                    />)
+                    />
+                    </div>)
                   }
                 />
             )

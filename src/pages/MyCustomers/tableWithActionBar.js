@@ -77,6 +77,7 @@ export default class extends React.Component {
       preferences,
       loading: false,
       open: false,
+      disable: true,
     };
     
   }
@@ -99,6 +100,7 @@ export default class extends React.Component {
     const { pageData } = this.state;
     pageData[index].selected = false;
     this.setState({ pageData, selectAllItems: false });
+    this.setState({disable: true}); 
   }
 
   handleFilter = (filters) => {
@@ -130,6 +132,7 @@ export default class extends React.Component {
     const { pageData } = this.state;
     pageData[index].selected = true;
     this.setState({ pageData, selectAllItems: false });
+    this.setState({disable: false}); 
   }
 
   handleSelectAllItems = (selectAllItems) => {
@@ -172,7 +175,7 @@ export default class extends React.Component {
               Add
             </Button>
             &nbsp;&nbsp;&nbsp;
-            <Button onClick={this.handleDeleteSelectedRows} appearance="secondary" id="secondary-id" className="undefined">
+            <Button onClick={this.handleDeleteSelectedRows} appearance="secondary" id="secondary-id" className="undefined" disabled={this.state.disable}>
               Delete 
             </Button>
           </div>
