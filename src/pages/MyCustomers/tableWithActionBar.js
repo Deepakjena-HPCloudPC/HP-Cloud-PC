@@ -168,12 +168,12 @@ export default class extends React.Component {
       <div>
         <div style={{ paddingBottom: '20px' }}>
           <div style={{ display: 'inline-block', width: '50%' }}>
-          <Button onClick={this.Isopen}>
-              New Customer
+          <Button onClick={this.Isopen} id="primary-id" appearance="undefined" className="undefined">
+              Add
             </Button>
             &nbsp;&nbsp;&nbsp;
-            <Button onClick={this.handleDeleteSelectedRows} >
-              Delete Selected Rows
+            <Button onClick={this.handleDeleteSelectedRows} appearance="secondary" id="secondary-id" className="undefined">
+              Delete 
             </Button>
           </div>
 
@@ -186,11 +186,11 @@ export default class extends React.Component {
           </div>
 
           <Modal
-  onClose={this.yourCallbackFunction}
-  title="Customer Information"
-  size="sm" show={this.state.open}>
-  <div>
-            <Panel  >
+            onClose={this.yourCallbackFunction}
+            title="Add a New Customer"
+            size="sm" show={this.state.open}>
+            <div>
+        
     <Formik
       initialValues={{
         email: '',
@@ -355,7 +355,7 @@ export default class extends React.Component {
           </form>
         )}
     />
-  </Panel>
+
             </div>
 </Modal>
         </div>

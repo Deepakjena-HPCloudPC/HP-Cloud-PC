@@ -20,60 +20,6 @@ const handleClick = (history, path) => (event) => {
 }
 
 const innerPages = [
-  // {
-  //   component: ChartsPage,
-  //   crumbs: [
-  //     {
-  //       text: "Home",
-  //       url: "/",
-  //     }, 
-  //     {
-  //       text: "Charts",
-  //     }
-  //   ],
-  //   key: "charts",
-  //   label: "Charts",
-  //   route: {
-  //     path: '/charts',
-  //   },
-  //   title: "Charts",
-  // },
-  // {
-  //   component: FormsPage,
-  //   crumbs: [
-  //     {
-  //       text: "Home",
-  //       url: "/",
-  //     },
-  //     {
-  //       text: "Forms",
-  //     }
-  //   ],
-  //   key: 'forms',
-  //   label: "Forms",
-  //   route: {
-  //     path: '/forms',
-  //   },
-  //   title: "Forms",
-  // },
-  // {
-  //   component: TablePage,
-  //   crumbs: [
-  //     {
-  //       text: "Home",
-  //       url: "/",
-  //     },
-  //     {
-  //       text: "Tables",
-  //     }
-  //   ],
-  //   key: 'tables',
-  //   label: "Tables",
-  //   route: {
-  //     path: '/tables',
-  //   },
-  //   title: "Tables",
-  // },
   {
     component: Dashboard,
     crumbs: [
@@ -240,6 +186,7 @@ export default ({ ...props }) => (
                       onClick={handleClick(props.history, page.route.path)}
                       url={page.route.path}
                       icon={page.icon}
+                      selected={page.selected}
                     />
                   )}
                 />

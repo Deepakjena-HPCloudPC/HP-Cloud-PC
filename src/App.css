@@ -10,7 +10,16 @@
   padding: 120px 20px;
   width: calc(100% - 300px);
 }
+
+
+.vn-side-menu__logo{
+  padding: 15px 5px;
+}
+
 .vn-side-menu__logo-image{
   width: 80px;
-  
 } 
+
+.vn-side-menu--hp-theme .vn-side-menu__item-link{
+  padding-left: 28px !important;
+}

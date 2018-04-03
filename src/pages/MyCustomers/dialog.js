@@ -5,7 +5,7 @@ import { Button, DatePicker, Dropdown, FormField, Panel, Password, TextBox, Text
 
 
 export default () => (
-  <Panel className="vnex-forms-page" title="Customer Information">
+  <Panel className="vnex-forms-page" title="Add a New Customer">
     <Formik
       initialValues={{
         email: '',
