@@ -156,16 +156,8 @@ export default class extends React.Component {
       <div>
         <div style={{ paddingBottom: '20px' }}>
           <div style={{ display: 'inline-block', width: '50%' }}>
-            {/* <Button onClick={this.handleDeleteSelectedRows}>
-              Delete Selected Rows
-            </Button> */}
           </div>
           <div style={{ display: 'inline-block', width: '50%', textAlign: 'right' }}>
-            {/* <TableConfiguration
-              columns={config.columns}
-              onChange={this.handlePreferencesChange}
-              preferences={preferences}
-            /> */}
           </div>
         </div>
         <Table

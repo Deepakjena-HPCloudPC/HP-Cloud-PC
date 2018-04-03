@@ -15,7 +15,7 @@ class Neworder extends React.Component {
             </FormField>
 
             <FormField label="2. Breakdown of MOBILE and FIXED LOCATION users:" id="formfield-id">
-                <RadioButtons name="radiobutton_horizontal" alignment="horizontal">
+                <RadioButtons name="radiobutton_label" id="radio-group-id">
                     <RadioButton
                         label="Mobile Users"
                         index={0}
@@ -33,7 +33,7 @@ class Neworder extends React.Component {
             </FormField>
 
             <FormField label="3. Display Usge among Users (how many displays does each user have)" id="formfield-id">
-                <RadioButtons name="radiobutton_horizontal" alignment="horizontal">
+                <RadioButtons name="radiobutton_label" id="radio-group-id">
                     <RadioButton
                         label="1 or 2 Displays"
                         index={0}
@@ -52,7 +52,7 @@ class Neworder extends React.Component {
 
             <FormField label="4. How are your PRINTERS supported" id="formfield-id">
             <div style={{width: "600px"}}>
-                <RadioButtons name="radiobutton_horizontal" alignment="horizontal">
+                <RadioButtons name="radiobutton_label" id="radio-group-id">
                     <RadioButton
                         label="User has a printer connected to their PC"
                         index={0}
@@ -76,7 +76,7 @@ class Neworder extends React.Component {
             </FormField>
 
             <FormField label="5. Breakdown of MOBILE and FIXED LOCATION users:" id="formfield-id">
-                <RadioButtons name="radiobutton_horizontal" alignment="horizontal">
+                <RadioButtons name="radiobutton_label" id="radio-group-id">
                     <RadioButton
                         label="Camera"
                         index={0}
@@ -99,7 +99,7 @@ class Neworder extends React.Component {
             </FormField>
 
             <FormField label="6. Breakdown of MOBILE and FIXED LOCATION users:" id="formfield-id">
-                <RadioButtons name="radiobutton_horizontal" alignment="horizontal">
+                <RadioButtons name="radiobutton_label" id="radio-group-id">
                     <RadioButton
                         label="Yes"
                         index={0}
@@ -114,7 +114,7 @@ class Neworder extends React.Component {
             </FormField>
 
             <FormField label="7. Do any of your peripherals require a Serial Port" id="formfield-id">
-                <RadioButtons name="radiobutton_horizontal" alignment="horizontal">
+                <RadioButtons name="radiobutton_label" id="radio-group-id">
                     <RadioButton
                     label="Yes"
                     index={0}

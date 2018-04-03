@@ -13,8 +13,8 @@ import HomePage from './pages/HomePage';
 import TablePage from './pages/TablePage';
 import logo from './hp.svg';
 import './App.css';
-  
-const handleClick = (history, path) => (event) => {
+
+const handleClick = (history, path, selected) => (event) => {
   event.preventDefault();
   history.push(path);
 }
@@ -183,7 +183,7 @@ export default ({ ...props }) => (
                   render={props => (
                     <SideMenuItem
                       label={page.label}
-                      onClick={handleClick(props.history, page.route.path)}
+                      onClick={handleClick(props.history, page.route.path, page.selected)}
                       url={page.route.path}
                       icon={page.icon}
                       selected={page.selected}
@@ -209,7 +209,7 @@ export default ({ ...props }) => (
                           crumb => (
                             {
                               ...crumb,
-                              onClick: handleClick(props.history, crumb.url),
+                              onClick: handleClick(props.history, crumb.url, props.selected),
                             }
                           )
                         )
