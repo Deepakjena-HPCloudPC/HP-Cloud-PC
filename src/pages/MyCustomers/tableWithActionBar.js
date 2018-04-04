@@ -160,7 +160,7 @@ export default class extends React.Component {
   Isopen = (event) =>{
     this.setState({open: true});
   }
-  yourCallbackFunction = (event) =>{
+  closeFunction = (event) =>{
     this.setState({open: false});
   }
 
@@ -189,7 +189,7 @@ export default class extends React.Component {
           </div>
 
           <Modal
-            onClose={this.yourCallbackFunction}
+            onClose={this.closeFunction}
             title="Add a New Customer"
             size="sm" show={this.state.open}>
             <div>

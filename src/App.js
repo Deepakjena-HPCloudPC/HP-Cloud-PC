@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Header, SideMenu, SideMenuItem, Icon, AppBar, AppBarLeftSection, AppBarRightSection, IconButton} from '@veneer/core';
+import { Header, SideMenu, SideMenuItem, Icon, AppBar, AppBarLeftSection, AppBarRightSection, IconButton,
+  DropdownIcon, DropdownIconAction} from '@veneer/core';
 import Dashboard from './pages/Dashboard';
 import MyCustomers from './pages/MyCustomers';
 import Neworder from './pages/Neworder';
@@ -224,7 +225,11 @@ export default ({ ...props }) => (
                         <h4>{page.title}</h4>
                       </AppBarLeftSection>
                       <AppBarRightSection>
-                        <IconButton icon="user" />
+                      <DropdownIcon icon="user" className="undefined" popoverPosition="left" popoverAlignment="top">
+                        <DropdownIconAction label="Edit" />
+                        <DropdownIconAction label="Details" />
+                        <DropdownIconAction label="Logout" />
+                      </DropdownIcon>
                       </AppBarRightSection>
                     </AppBar>
                     )
